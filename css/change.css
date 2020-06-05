@@ -1,0 +1,150 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.sky {
+    height: 200%;
+    width: 125%;
+    position: absolute;
+    top: 0;
+    left: -12.5%;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5bb1f6), color-stop(50%, #5bb1f6), color-stop(50%, #0d1427), to(#0d1427));
+    background: linear-gradient(#5bb1f6, #5bb1f6 50%, #0d1427 50%, #0d1427);
+}
+
+.sun,
+.moon {
+    position: absolute;
+    left: 50vw;
+    -webkit-transform: translatex(-50%);
+    transform: translatex(-50%);
+    height: 15vmin;
+    width: 15vmin;
+    top: 100vh;
+}
+
+.mountain-large,
+.mountain-small {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.9;
+}
+
+.mountain-large {
+    right: 10vw;
+    border-bottom: 25vmin solid #99b;
+    border-right: 16vmin solid transparent;
+    border-left: 16vmin solid transparent;
+}
+
+.mountain-small {
+    right: 5vw;
+    border-bottom: 13vmin solid #99b;
+    border-right: 8vmin solid transparent;
+    border-left: 8vmin solid transparent;
+}
+
+.house {
+    left: 5vw;
+    bottom: 0;
+    position: absolute;
+    height: 10vmin;
+    width: 14vmin;
+    background: #999;
+}
+
+.house::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+    transform: translatex(-50%);
+    height: 0;
+    width: 0;
+    border-bottom: 5vmin solid #999;
+    border-right: 9vmin solid transparent;
+    border-left: 9vmin solid transparent;
+}
+
+.house .door {
+    position: absolute;
+    height: 60%;
+    width: 25%;
+    left: 15%;
+    bottom: 0;
+    background: #ba262c;
+}
+
+.house .door::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    -webkit-transform: translatey(-50%);
+    transform: translatey(-50%);
+    background: #000;
+    height: 0.5vmin;
+    width: 0.5vmin;
+    border-radius: 50%;
+}
+
+.house .window {
+    position: absolute;
+    height: 37.5%;
+    width: 25%;
+    right: 15%;
+    bottom: 50%;
+    -webkit-transform: translatey(50%);
+    transform: translatey(50%);
+}
+
+.house .window::before,
+.house .window::after {
+    content: "";
+    display: block;
+    background: #000;
+    position: absolute;
+}
+
+.house .window::before {
+    height: 0.3vmin;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    transform: translatey(-50%);
+}
+
+.house .window::after {
+    width: 0.3vmin;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+    transform: translatex(-50%);
+}
+
+.cow {
+    height: 8vmin;
+    width: 9vmin;
+    position: absolute;
+    bottom: -1vmin;
+    left: 30vw;
+}
